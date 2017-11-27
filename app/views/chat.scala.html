@@ -1,0 +1,34 @@
+@()(implicit request: Request[_])
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script type='text/javascript' src='@routes.Assets.at("lib/jquery/jquery.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("lib/flot/jquery.flot.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("javascripts/index.js")'></script>
+    </head>
+
+    <body data-ws-url="@routes.HomeController.ws.webSocketURL(secure = false)">
+        <form id="addsymbolform">
+            <div>
+                <div>
+                    <p>ユーザ名</p>1
+                    <textarea name="" id="username" cols="10" rows="1"></textarea>
+                </div>
+
+                <div>
+                    <p>内容</p>
+                    <textarea name="" id="addchat" cols="30" rows="4"></textarea>
+                </div>
+            </div>
+
+            <!-- メッセージを送る部分 -->
+            <button name="button" type="submit">send message!</button>
+        </form>
+
+            <!-- チャット内容が動的に生成される部分 -->
+        <ul id="chat" style="list-style:none;">
+            <li>〜チャット内容〜</li>
+        </ul>
+    </body>
+</html>

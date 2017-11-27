@@ -14,4 +14,10 @@ libraryDependencies ++= Seq( jdbc , ehcache , ws , specs2 % Test , guice )
 
 unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" )  
 
-      
+libraryDependencies += "org.webjars" % "flot" % "0.8.3"
+libraryDependencies += "org.webjars" % "bootstrap" % "3.3.6"
+
+libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % "2.5.6" % Test
+libraryDependencies += "com.typesafe.akka" %% "akka-stream-testkit" % "2.5.6" % Test
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test
+libraryDependencies += "org.awaitility" % "awaitility" % "3.0.0" % Test
