@@ -7,7 +7,7 @@ $ ->
     console.log(message.user)
     console.log(message.chat)
     li = document.createElement('li')
-    li.textContent = message.chat
+    li.textContent = message.user + ':' + message.chat
     $("#chat").append(li)
 
 

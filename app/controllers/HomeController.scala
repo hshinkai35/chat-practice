@@ -2,7 +2,7 @@ package controllers
 
 import javax.inject._
 
-import actors.UserActor
+import actors.WebSocketActor
 import akka.actor.ActorSystem
 import akka.stream.Materializer
 import play.api.libs.json.JsValue
@@ -27,6 +27,6 @@ class HomeController @Inject()(cc: ControllerComponents)(implicit system: ActorS
   }
 
   def ws = WebSocket.accept[JsValue, JsValue] { request =>
-    ActorFlow.actorRef(out => UserActor.prop(out))
+    ActorFlow.actorRef(out => WebSocketActor.props(out))
   }
 }
