@@ -24,7 +24,6 @@ $ ->
          </div>
          </div>"""
 
-
     else
       chat = """<div class="chat">
          <figure class="chat-img-right">
@@ -40,7 +39,6 @@ $ ->
          </div>
          </div>"""
 
-
     $("#chat")
       .append(chat)
 
@@ -49,5 +47,4 @@ $ ->
     # send the message to watch the stock
     ws.send(JSON.stringify({userId: userId, user: $("#username").val(), chat: $("#addchat").val()}))
     # reset the form
-    $("#username").val("")
     $("#addchat").val("")
