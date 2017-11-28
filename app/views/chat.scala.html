@@ -3,12 +3,17 @@
 
 <html>
     <head>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/chat.css")">
         <script type='text/javascript' src='@routes.Assets.at("lib/jquery/jquery.min.js")'></script>
         <script type='text/javascript' src='@routes.Assets.at("lib/flot/jquery.flot.js")'></script>
         <script type='text/javascript' src='@routes.Assets.at("javascripts/index.js")'></script>
     </head>
 
-    <body data-ws-url="@routes.HomeController.ws.webSocketURL(secure = true)">
+    <body
+      data-ws-url="@routes.HomeController.ws.webSocketURL(secure = true)"
+      data-img-man="@routes.Assets.at("images/man.png")"
+      data-img-woman="@routes.Assets.at("images/woman.png")">
+
         <form id="addsymbolform">
             <div>
                 <div>
@@ -27,8 +32,7 @@
         </form>
 
             <!-- チャット内容が動的に生成される部分 -->
-        <ul id="chat" style="list-style:none;">
-            <li>〜チャット内容〜</li>
-        </ul>
+        <div id="chat"></div>
+
     </body>
 </html>
