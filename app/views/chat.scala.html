@@ -32,7 +32,21 @@
         </form>
 
             <!-- チャット内容が動的に生成される部分 -->
-        <div id="chat"></div>
+        <div id="chat">
+            <div class="chat">
+                <figure class="chat-img-left">
+                    <img src="@routes.Assets.at("images/man.png")">
+                    <figcaption class="chat-img-description">
+                        管理人
+                    </figcaption>
+                </figure>
+                <div class="chat-text-right">
+                    <p class="chat-text">
+                        これはチャットです。上記からメッセージを送信することができます。
+                    </p>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>
